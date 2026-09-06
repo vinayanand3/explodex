@@ -4,6 +4,8 @@
 
 Explodex is a high-performance, browser-native 3D deconstruction laboratory built with React, Three.js, and WebGL. Explore "How Things Work" from the inside out — disassemble everyday consumer electronics, inspect the micro-mechanics of high-complication horology with live ticking movements, and explore anatomical reference models with zero lag.
 
+**[🚀 Experience the Live Interactive 3D Studio on GitHub Pages](https://vinayanand3.github.io/explodex/)**
+
 ---
 
 ## 🌟 Featured Interactive Models
