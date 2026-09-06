@@ -37,3 +37,8 @@ next-env.d.ts
 /outputs/
 /work/
 *.tsbuildinfo
+__pycache__/
+*.pyc
+scratch_chrome/
+screen_check.png
+*.svg

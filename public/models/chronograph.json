@@ -1,0 +1,829 @@
+{
+  "version": "1.0.0",
+  "itemName": "Mechanical Automatic Chronograph",
+  "subtitle": "28-Jewel Column-Wheel Automatic Chronograph Timepiece",
+  "source": "Precision Horology CAD Studio",
+  "scope": "Complete Micro-Mechanical Movement & 316L Case Assembly",
+  "parts": [
+    {
+      "id": "chrono_sapphire_crystal",
+      "name": "Domed Sapphire Crystal",
+      "conceptId": "sapphire_crystal",
+      "system": "sapphire_optics",
+      "chunk": 0,
+      "positions": 0,
+      "normals": 9840,
+      "indices": 14760,
+      "vertexCount": 820,
+      "indexCount": 4080,
+      "bounds": [
+        [
+          -0.19,
+          0.66,
+          0.05
+        ],
+        [
+          0.19,
+          1.04,
+          0.068
+        ]
+      ],
+      "explodeOffset": [
+        0.0,
+        0.0,
+        0.38
+      ]
+    },
+    {
+      "id": "chrono_tachymeter_bezel",
+      "name": "Ceramic Tachymeter Bezel",
+      "conceptId": "tachymeter_bezel",
+      "system": "tachymeter_bezel",
+      "chunk": 0,
+      "positions": 31080,
+      "normals": 41640,
+      "indices": 46920,
+      "vertexCount": 880,
+      "indexCount": 2592,
+      "bounds": [
+        [
+          -0.228,
+          0.62239,
+          0.038
+        ],
+        [
+          0.228,
+          1.07761,
+          0.054
+        ]
+      ],
+      "explodeOffset": [
+        0.0,
+        0.0,
+        0.3
+      ]
+    },
+    {
+      "id": "chrono_dial_indices",
+      "name": "Applied Rhodium Batons & Tachymeter Scale",
+      "conceptId": "dial_indices",
+      "system": "dial_indices",
+      "chunk": 0,
+      "positions": 57288,
+      "normals": 101928,
+      "indices": 124248,
+      "vertexCount": 3720,
+      "indexCount": 6696,
+      "bounds": [
+        [
+          -0.2085,
+          0.6415,
+          0.03075
+        ],
+        [
+          0.2085,
+          1.059,
+          0.0555
+        ]
+      ],
+      "explodeOffset": [
+        0.0,
+        0.0,
+        0.25
+      ]
+    },
+    {
+      "id": "chrono_hour_hand",
+      "name": "Faceted Dauphine Hour Hand",
+      "conceptId": "hands_assembly",
+      "system": "hands_assembly",
+      "chunk": 0,
+      "positions": 151032,
+      "normals": 151092,
+      "indices": 151124,
+      "vertexCount": 5,
+      "indexCount": 12,
+      "bounds": [
+        [
+          -0.006,
+          0.85,
+          0.037
+        ],
+        [
+          0.006,
+          0.938,
+          0.0405
+        ]
+      ],
+      "explodeOffset": [
+        0.0,
+        0.0,
+        0.21
+      ]
+    },
+    {
+      "id": "chrono_minute_hand",
+      "name": "Faceted Dauphine Minute Hand",
+      "conceptId": "hands_assembly",
+      "system": "hands_assembly",
+      "chunk": 0,
+      "positions": 151172,
+      "normals": 151232,
+      "indices": 151264,
+      "vertexCount": 5,
+      "indexCount": 12,
+      "bounds": [
+        [
+          -0.005,
+          0.85,
+          0.041
+        ],
+        [
+          0.005,
+          0.984,
+          0.0445
+        ]
+      ],
+      "explodeOffset": [
+        0.0,
+        0.0,
+        0.22
+      ]
+    },
+    {
+      "id": "chrono_seconds_sweeper",
+      "name": "Racing Red Chronograph Sweeper",
+      "conceptId": "chrono_sweeper",
+      "system": "chrono_needle",
+      "chunk": 0,
+      "positions": 151312,
+      "normals": 154048,
+      "indices": 155416,
+      "vertexCount": 228,
+      "indexCount": 540,
+      "bounds": [
+        [
+          -0.0075,
+          0.8185,
+          0.04475
+        ],
+        [
+          0.0075,
+          1.013,
+          0.04875
+        ]
+      ],
+      "explodeOffset": [
+        0.0,
+        0.0,
+        0.24
+      ]
+    },
+    {
+      "id": "chrono_sub_seconds",
+      "name": "Small Running Seconds Hand",
+      "conceptId": "sub_seconds",
+      "system": "hands_assembly",
+      "chunk": 0,
+      "positions": 157576,
+      "normals": 158704,
+      "indices": 159268,
+      "vertexCount": 94,
+      "indexCount": 228,
+      "bounds": [
+        [
+          -0.08,
+          0.846,
+          0.037
+        ],
+        [
+          -0.072,
+          0.876,
+          0.0405
+        ]
+      ],
+      "explodeOffset": [
+        -0.04,
+        0.0,
+        0.2
+      ]
+    },
+    {
+      "id": "chrono_sub_hands_static",
+      "name": "Sub-dial Indicators & Pinion Cap",
+      "conceptId": "hands_assembly",
+      "system": "hands_assembly",
+      "chunk": 0,
+      "positions": 160180,
+      "normals": 163660,
+      "indices": 165400,
+      "vertexCount": 290,
+      "indexCount": 744,
+      "bounds": [
+        [
+          -0.02133,
+          0.76505,
+          0.037
+        ],
+        [
+          0.0795,
+          0.87293,
+          0.0475
+        ]
+      ],
+      "explodeOffset": [
+        0.02,
+        -0.02,
+        0.19
+      ]
+    },
+    {
+      "id": "chrono_dial_face",
+      "name": "Sunburst Tri-Compax Dial",
+      "conceptId": "dial_face",
+      "system": "dial_face",
+      "chunk": 0,
+      "positions": 168376,
+      "normals": 173992,
+      "indices": 176800,
+      "vertexCount": 468,
+      "indexCount": 1344,
+      "bounds": [
+        [
+          -0.186,
+          0.664,
+          0.02755
+        ],
+        [
+          0.186,
+          1.036,
+          0.03005
+        ]
+      ],
+      "explodeOffset": [
+        0.0,
+        0.0,
+        0.15
+      ]
+    },
+    {
+      "id": "chrono_escapement_wheel",
+      "name": "High-Beat Escape Wheel",
+      "conceptId": "escapement_wheel",
+      "system": "regulating_organ",
+      "chunk": 0,
+      "positions": 182176,
+      "normals": 190888,
+      "indices": 195244,
+      "vertexCount": 726,
+      "indexCount": 1596,
+      "bounds": [
+        [
+          -0.06701,
+          0.78397,
+          0.008
+        ],
+        [
+          0.06709,
+          0.91742,
+          0.016
+        ]
+      ],
+      "explodeOffset": [
+        0.04,
+        0.06,
+        0.09
+      ]
+    },
+    {
+      "id": "chrono_pallet_fork",
+      "name": "Synthetic Ruby Pallet Lever",
+      "conceptId": "pallet_fork",
+      "system": "regulating_organ",
+      "chunk": 0,
+      "positions": 201628,
+      "normals": 202492,
+      "indices": 202924,
+      "vertexCount": 72,
+      "indexCount": 108,
+      "bounds": [
+        [
+          0.01312,
+          0.85084,
+          0.009
+        ],
+        [
+          0.05688,
+          0.91916,
+          0.015
+        ]
+      ],
+      "explodeOffset": [
+        0.08,
+        0.08,
+        0.07
+      ]
+    },
+    {
+      "id": "chrono_balance_assembly",
+      "name": "Glucydur Balance & Hairspring",
+      "conceptId": "balance_wheel",
+      "system": "regulating_organ",
+      "chunk": 0,
+      "positions": 203356,
+      "normals": 216508,
+      "indices": 223084,
+      "vertexCount": 1096,
+      "indexCount": 2934,
+      "bounds": [
+        [
+          -0.083,
+          0.767,
+          0.0015
+        ],
+        [
+          0.083,
+          0.933,
+          0.009
+        ]
+      ],
+      "explodeOffset": [
+        -0.08,
+        0.06,
+        0.05
+      ]
+    },
+    {
+      "id": "chrono_gear_train",
+      "name": "4-Wheel Transmission Train",
+      "conceptId": "gear_train",
+      "system": "gear_transmission",
+      "chunk": 0,
+      "positions": 234820,
+      "normals": 263716,
+      "indices": 278164,
+      "vertexCount": 2408,
+      "indexCount": 4344,
+      "bounds": [
+        [
+          -0.1505,
+          0.7515,
+          -0.014
+        ],
+        [
+          0.1105,
+          0.9805,
+          -0.002
+        ]
+      ],
+      "explodeOffset": [
+        -0.04,
+        -0.04,
+        -0.02
+      ]
+    },
+    {
+      "id": "chrono_column_wheel",
+      "name": "6-Pillar Chronograph Clutch",
+      "conceptId": "column_wheel",
+      "system": "gear_transmission",
+      "chunk": 0,
+      "positions": 295540,
+      "normals": 300844,
+      "indices": 303496,
+      "vertexCount": 442,
+      "indexCount": 1200,
+      "bounds": [
+        [
+          0.029,
+          0.879,
+          -0.019
+        ],
+        [
+          0.101,
+          0.951,
+          -0.003
+        ]
+      ],
+      "explodeOffset": [
+        0.07,
+        0.04,
+        -0.04
+      ]
+    },
+    {
+      "id": "chrono_mainplate_bridges",
+      "name": "Perlage Mainplate & Jewel Bearings",
+      "conceptId": "mainplate",
+      "system": "automatic_winding",
+      "chunk": 0,
+      "positions": 308296,
+      "normals": 318448,
+      "indices": 323524,
+      "vertexCount": 846,
+      "indexCount": 2304,
+      "bounds": [
+        [
+          -0.18,
+          0.67,
+          -0.037
+        ],
+        [
+          0.18,
+          1.03,
+          -0.02
+        ]
+      ],
+      "explodeOffset": [
+        0.0,
+        0.0,
+        -0.08
+      ]
+    },
+    {
+      "id": "chrono_oscillating_rotor",
+      "name": "Heavy Tungsten Bidirectional Rotor",
+      "conceptId": "oscillating_rotor",
+      "system": "automatic_winding",
+      "chunk": 0,
+      "positions": 332740,
+      "normals": 335932,
+      "indices": 337528,
+      "vertexCount": 266,
+      "indexCount": 768,
+      "bounds": [
+        [
+          -0.174,
+          0.816,
+          -0.048
+        ],
+        [
+          0.174,
+          1.024,
+          -0.04
+        ]
+      ],
+      "explodeOffset": [
+        0.0,
+        -0.06,
+        -0.15
+      ]
+    },
+    {
+      "id": "chrono_watch_case",
+      "name": "316L Cushion Watch Case & Pushers",
+      "conceptId": "watch_case",
+      "system": "case_exterior",
+      "chunk": 0,
+      "positions": 340600,
+      "normals": 351136,
+      "indices": 356404,
+      "vertexCount": 878,
+      "indexCount": 2088,
+      "bounds": [
+        [
+          -0.22,
+          0.58322,
+          -0.034
+        ],
+        [
+          0.266,
+          1.11678,
+          0.034
+        ]
+      ],
+      "explodeOffset": [
+        0.0,
+        0.0,
+        -0.22
+      ]
+    },
+    {
+      "id": "chrono_exhibition_caseback",
+      "name": "Screw-Down Exhibition Caseback",
+      "conceptId": "caseback",
+      "system": "case_exterior",
+      "chunk": 0,
+      "positions": 364756,
+      "normals": 371764,
+      "indices": 375268,
+      "vertexCount": 584,
+      "indexCount": 1512,
+      "bounds": [
+        [
+          -0.22,
+          0.63037,
+          -0.047
+        ],
+        [
+          0.22,
+          1.06963,
+          -0.034
+        ]
+      ],
+      "explodeOffset": [
+        0.0,
+        0.0,
+        -0.28
+      ]
+    },
+    {
+      "id": "chrono_caseback_crystal",
+      "name": "Rear Exhibition Crystal",
+      "conceptId": "caseback_crystal",
+      "system": "sapphire_optics",
+      "chunk": 0,
+      "positions": 381316,
+      "normals": 383692,
+      "indices": 384880,
+      "vertexCount": 198,
+      "indexCount": 576,
+      "bounds": [
+        [
+          -0.152,
+          0.698,
+          -0.046
+        ],
+        [
+          0.152,
+          1.002,
+          -0.042
+        ]
+      ],
+      "explodeOffset": [
+        0.0,
+        0.0,
+        -0.34
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "sapphire_crystal",
+      "name": "Domed Sapphire Crystal",
+      "elements": [
+        "chrono_sapphire_crystal"
+      ]
+    },
+    {
+      "id": "tachymeter_bezel",
+      "name": "Ceramic Tachymeter Bezel",
+      "elements": [
+        "chrono_tachymeter_bezel"
+      ]
+    },
+    {
+      "id": "dial_indices",
+      "name": "Applied Rhodium Batons & Scales",
+      "elements": [
+        "chrono_dial_indices"
+      ]
+    },
+    {
+      "id": "hour_hand",
+      "name": "Faceted Dauphine Hour Hand",
+      "elements": [
+        "chrono_hour_hand"
+      ]
+    },
+    {
+      "id": "minute_hand",
+      "name": "Faceted Dauphine Minute Hand",
+      "elements": [
+        "chrono_minute_hand"
+      ]
+    },
+    {
+      "id": "chrono_sweeper",
+      "name": "Racing Red Chronograph Sweeper",
+      "elements": [
+        "chrono_seconds_sweeper"
+      ]
+    },
+    {
+      "id": "sub_seconds",
+      "name": "Small Running Seconds Hand",
+      "elements": [
+        "chrono_sub_seconds"
+      ]
+    },
+    {
+      "id": "sub_hands_static",
+      "name": "Sub-dial Indicators & Pinion Cap",
+      "elements": [
+        "chrono_sub_hands_static"
+      ]
+    },
+    {
+      "id": "dial_face",
+      "name": "Sunburst Tri-Compax Dial",
+      "elements": [
+        "chrono_dial_face"
+      ]
+    },
+    {
+      "id": "escapement_wheel",
+      "name": "High-Beat Escape Wheel",
+      "elements": [
+        "chrono_escapement_wheel"
+      ]
+    },
+    {
+      "id": "pallet_fork",
+      "name": "Synthetic Ruby Pallet Lever",
+      "elements": [
+        "chrono_pallet_fork"
+      ]
+    },
+    {
+      "id": "balance_wheel",
+      "name": "Glucydur Balance & Hairspring",
+      "elements": [
+        "chrono_balance_assembly"
+      ]
+    },
+    {
+      "id": "gear_train",
+      "name": "4-Wheel Transmission Train",
+      "elements": [
+        "chrono_gear_train"
+      ]
+    },
+    {
+      "id": "column_wheel",
+      "name": "6-Pillar Chronograph Clutch",
+      "elements": [
+        "chrono_column_wheel"
+      ]
+    },
+    {
+      "id": "mainplate",
+      "name": "Perlage Mainplate & Jewel Bearings",
+      "elements": [
+        "chrono_mainplate_bridges"
+      ]
+    },
+    {
+      "id": "oscillating_rotor",
+      "name": "Heavy Tungsten Bidirectional Rotor",
+      "elements": [
+        "chrono_oscillating_rotor"
+      ]
+    },
+    {
+      "id": "watch_case",
+      "name": "316L Cushion Watch Case & Pushers",
+      "elements": [
+        "chrono_watch_case"
+      ]
+    },
+    {
+      "id": "caseback",
+      "name": "Screw-Down Exhibition Caseback",
+      "elements": [
+        "chrono_exhibition_caseback"
+      ]
+    },
+    {
+      "id": "caseback_crystal",
+      "name": "Rear Exhibition Crystal",
+      "elements": [
+        "chrono_caseback_crystal"
+      ]
+    }
+  ],
+  "systems": [
+    {
+      "id": "case_exterior",
+      "name": "316L Stainless Steel Case & Pushers",
+      "color": "#c4ccd4",
+      "description": "316L stainless steel case featuring 4 sculpted ergonomic curved lugs, integrated bracelet end-links, knurled screw-down winding crown, crown guards, and dual pump pushers."
+    },
+    {
+      "id": "tachymeter_bezel",
+      "name": "Ceramic Tachymeter Bezel",
+      "color": "#16191d",
+      "description": "High-gloss obsidian black ceramic bezel insert framed by a polished 316L retaining ring, carrying radial tachymetric velocity calibrations."
+    },
+    {
+      "id": "sapphire_optics",
+      "name": "Anti-Reflective Sapphire Crystal",
+      "color": "#d4e6f6",
+      "description": "Domed synthetic corundum sapphire crystal (Mohs hardness 9) providing scratch-proof optical clarity and anti-reflective protection."
+    },
+    {
+      "id": "dial_indices",
+      "name": "Applied Rhodium Batons & Scales",
+      "color": "#f0f4f8",
+      "description": "Precision 3D faceted rhodium hour batons with luminous inlays, 60-second outer chapter track ticks, sub-dial rings, and ceramic tachymeter calibration markings."
+    },
+    {
+      "id": "hands_assembly",
+      "name": "Faceted Dauphine Hands & Pinions",
+      "color": "#e8edf2",
+      "description": "Faceted Dauphine hour and minute hands capturing specular light with beveled ridges, paired with small seconds running needle and pinion collar."
+    },
+    {
+      "id": "chrono_needle",
+      "name": "Racing Red Chronograph Sweeper",
+      "color": "#e6282b",
+      "description": "Ultra-slender central chronograph sweep seconds needle finished in vibrant racing scarlet, sweeping smoothly at 8 beats per second with counterweight and arrow tip."
+    },
+    {
+      "id": "dial_face",
+      "name": "Sunburst Obsidian Dial",
+      "color": "#15181b",
+      "description": "Sunburst obsidian dial face with 3 recessed circular sub-dial pans at 3, 6, and 9 o'clock for 30-minute, 12-hour, and running seconds chronograph readouts."
+    },
+    {
+      "id": "regulating_organ",
+      "name": "28,800 vph Escapement & Balance",
+      "color": "#e5b74c",
+      "description": "The heart of the movement: a 28,800 vph (4 Hz) club-tooth escape wheel, synthetic ruby pallet lever, and Glucydur balance wheel with Nivarox hairspring."
+    },
+    {
+      "id": "gear_transmission",
+      "name": "Gear Train & 6-Pillar Column Wheel",
+      "color": "#d69f3a",
+      "description": "Precision brass gear train transmitting mainspring torque, paired with a 6-pillar micro-machined column wheel clutch coordinating instant start, stop, and reset actions."
+    },
+    {
+      "id": "automatic_winding",
+      "name": "Heavy Tungsten Rotor & Mainplate",
+      "color": "#828e9a",
+      "description": "Heavy tungsten bidirectional oscillating rotor winding the mainspring via wrist motion, supported by a circular perlage mainplate with 28 synthetic ruby jewels."
+    }
+  ],
+  "explanations": {
+    "domed sapphire crystal": "Ultra-pure synthetic corundum sapphire crystal (Mohs hardness 9) ground with a subtle outer dome. Anti-reflective coatings ensure pristine dial legibility.",
+    "ceramic tachymeter bezel": "High-gloss ceramic tachymeter bezel insert framed by polished 316L stainless steel, calibrated from 500 down to 60 units per hour for velocity calculation.",
+    "applied rhodium batons & scales": "Faceted 3D rhodium hour batons with white luminous inlays, paired with a 60-second chapter track, sub-dial rings, and radial tachymeter markings.",
+    "faceted dauphine hour hand": "Faceted Dauphine hour hand capturing specular light with beveled 3D center ridges, pointing to current local hour.",
+    "faceted dauphine minute hand": "Faceted Dauphine minute hand advancing in real time with beveled specular ridges for high optical legibility.",
+    "racing red chronograph sweeper": "Slender central sweep seconds hand finished in racing red with a classic counterweight and arrowhead tip, sweeping continuously at 8 beats per second (28,800 vph).",
+    "small running seconds hand": "Sub-dial running seconds needle at 9 o'clock rotating continuously every 60 seconds to confirm movement operation.",
+    "sub-dial indicators & pinion cap": "Miniature sub-dial totalizer hands for 30-minute and 12-hour chronograph registers, capped by a central polished steel pinion collar.",
+    "sunburst tri-compax dial": "Obsidian dial plate featuring 3 recessed sub-dials: 30-minute counter at 3, 12-hour totalizer at 6, and running small seconds at 9.",
+    "high-beat escape wheel": "Specialized 15 club-tooth escape wheel running at 28,800 vibrations per hour (4 Hz), impulsing the balance 8 times per second.",
+    "synthetic ruby pallet lever": "Precision-balanced Swiss lever holding two synthetic ruby pallets that alternately lock and release the escape wheel with minimal horological friction.",
+    "glucydur balance & hairspring": "Temperature-stable beryllium-bronze Glucydur balance wheel paired with an 8-coil Nivarox hairspring oscillating at 4 Hz for isochronous timing precision.",
+    "4-wheel transmission train": "Horological brass gear train (mainspring barrel, center wheel, third wheel, and fourth wheel) stepping down mainspring torque to the escapement.",
+    "6-pillar chronograph clutch": "Classic column wheel clutch with 6 precision-machined steel pillars mechanically coordinating instant start, stop, and reset pusher actions.",
+    "perlage mainplate & jewel bearings": "Circular-grained (perlage) brass mainplate providing micro-tolerance alignment for 28 synthetic ruby jewel bearings.",
+    "heavy tungsten bidirectional rotor": "High-density tungsten oscillating weight that rotates smoothly with wrist movement to wind the mainspring via a reduction reverser gear train.",
+    "316l cushion watch case & pushers": "316L stainless steel case with 4 sculpted ergonomic lugs, integrated bracelet end-links, fluted crown, crown guards, and dual chronograph pump pushers.",
+    "screw-down exhibition caseback": "Threaded 316L caseback bezel holding the rear observation window, engraved with 6 precision wrench notches for hermetic water-resistant sealing.",
+    "rear exhibition crystal": "Flat synthetic sapphire window in the caseback allowing owners to admire the operating column wheel, balance oscillation, and oscillating rotor."
+  },
+  "presets": [
+    {
+      "name": "Complete Watch",
+      "systems": [
+        "case_exterior",
+        "tachymeter_bezel",
+        "sapphire_optics",
+        "dial_indices",
+        "hands_assembly",
+        "chrono_needle",
+        "dial_face",
+        "regulating_organ",
+        "gear_transmission",
+        "automatic_winding"
+      ]
+    },
+    {
+      "name": "Dial & Hands",
+      "systems": [
+        "dial_face",
+        "dial_indices",
+        "hands_assembly",
+        "chrono_needle",
+        "sapphire_optics",
+        "tachymeter_bezel"
+      ]
+    },
+    {
+      "name": "Chronograph Movement",
+      "systems": [
+        "regulating_organ",
+        "gear_transmission",
+        "automatic_winding"
+      ]
+    },
+    {
+      "name": "316L Case & Pushers",
+      "systems": [
+        "case_exterior",
+        "tachymeter_bezel",
+        "sapphire_optics"
+      ]
+    }
+  ],
+  "chunks": [
+    {
+      "url": "/models/chronograph-0.bin",
+      "bytes": 387184
+    }
+  ],
+  "triangles": 11226
+}

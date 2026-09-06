@@ -1,64 +1,100 @@
-# Human Atlas
+# Explodex ⚡️
 
-An interactive 3D anatomy explorer built with React, Three.js, and shadcn/ui. Take the BodyParts3D adult male reference apart into **2,234 individually selectable meshes**, explore **15 anatomical systems**, and search **3,432 named concepts**.
+> **Interactive 3D Exploded-View Studio & Deconstruction Laboratory for Everyday Gadgets, Mechanical Timepieces & Anatomy.**
 
-**[Explore the live demo](https://human-atlas-seven.vercel.app)**
+Explodex is a high-performance, browser-native 3D deconstruction laboratory built with React, Three.js, and WebGL. Explore "How Things Work" from the inside out — disassemble everyday consumer electronics, inspect the micro-mechanics of high-complication horology with live ticking movements, and explore anatomical reference models with zero lag.
 
-## Explore
+---
 
-- Orbit, zoom, and select structures directly on the body.
-- Toggle individual systems or use skeleton and organ presets.
-- Move from assembled anatomy to a spaced inventory of every visible piece.
-- Search anatomical names and source identifiers.
-- Isolate a selected structure and read its details.
-- Use compact controls and detail panels on mobile.
+## 🌟 Featured Interactive Models
 
-## Run locally
+### 1. 🎧 AirPods Pro (2nd Generation)
+- **13 modeled CAD components** and 12 functional sub-assemblies accurately drafted from official Apple Accessory Design Guidelines.
+- **Acoustic Engineering**: Custom low-distortion high-excursion transducer (stiff composite dome + compliant roll-surround) and laser-perforated acoustic pressure-equalization vents.
+- **Computational Audio Silicon**: Apple H2 SiP running real-time ANC and Adaptive Transparency algorithms at 48 kHz.
+- **Sensors & Controls**: Inward-facing calibration microphone and indented capacitive force-sensor stem.
 
-Requires Node.js 22.13 or newer. No API keys or accounts are needed.
+### 2. ⌚️ Luxury Mechanical Automatic Chronograph
+- **19 micro-machined horological components**, 10 functional subsystems, and 11,226 triangles.
+- **Active 8-Beat Seconds Sweep (28,800 VPH)**: Central racing red chronograph sweeper needle sweeps continuously across the dial at **8 beats per second** (480 crisp micro-steps per 60-second revolution).
+- **Live Local Time**: Faceted Dauphine hour and minute hands advance in real local time ($H:M:S$).
+- **Live 4 Hz Regulating Organ**:
+  - **Glucydur Balance Wheel & Nivarox Hairspring**: Rapidly oscillates back and forth at **4 Hz** (±160° amplitude).
+  - **Synthetic Ruby Pallet Lever**: Rocks between synthetic ruby banking pins 8 times per second.
+  - **15-Tooth Club-Tooth Escape Wheel**: Steps forward with each balance impulse.
+  - **6-Pillar Column-Wheel Chronograph Clutch**: Coordinates start, stop, and reset pusher levers.
+  - **Heavy Tungsten Bidirectional Rotor**: Swings with realistic inertial pendulum physics.
+- **Synthesized Swiss Escapement Web Audio**: Zero-latency synthesized escapement acoustics ("tic-tac-tic-tac") with dedicated mute/unmute toggle.
+- **Sculpted 316L Stainless Steel Case**: Ergonomically downward-swept curved lugs, integrated bracelet end-links, knurled screw-down crown with crown guards, and dual pump pushers.
 
+### 3. 🫀 Adult Male Human Anatomy (BodyParts3D)
+- **2,234 individually selectable meshes** and **3,432 named anatomical concepts**.
+- **15 anatomical systems**: Skeletal, muscular, cardiac, nervous, arterial, venous, respiratory, and more.
+
+---
+
+## 🚀 Key Technical Innovations
+
+- **Dual-Row GPU DataTexture Pipeline**:
+  - Merged single-draw-call geometry for thousands of components.
+  - **Row 0** ($y = 0.25$): 3D explosion layout translation $(dx, dy, dz, \text{visible})$.
+  - **Row 1** ($y = 0.75$): Local pivot transformation $(px, py, \theta_{\text{rad}}, \text{isAnimated})$ applied inside the vertex shader for zero-cost real-time animation.
+- **Synchronized Raycast Pickers**:
+  - Invisible picker matrices dynamically match vertex shader transforms to machine epsilon, allowing users to tap or click moving hands in motion to inspect engineering metadata.
+- **Stationary Floor Turntable**:
+  - Decoupled scene graph architecture where the floor turntable pedestal remains 100% stationary on the ground while the model rotates smoothly on top of it.
+- **Synthesized Web Audio API Engine**:
+  - Realistic synthetic ruby pallet stone impact audio synthesized at 4,400 Hz and 3,800 Hz with sharp exponential decay (tau = 5ms).
+- **Non-Overlapping Exploded Layouts**:
+  - Dynamic 2D bin-packing algorithm computes optimal spatial distribution at any desktop or mobile aspect ratio.
+
+---
+
+## 🛠️ Getting Started
+
+### Prerequisites
+- Node.js 22.13 or newer
+- npm
+
+### Installation & Local Run
 ```sh
-npm ci
+git clone https://github.com/vinayanand3/explodex.git
+cd explodex
+npm install
 npm run dev
 ```
 
-Open http://localhost:3016. To build the static site, run `npm run build`; the output is in `dist/`.
+Open [http://localhost:3016](http://localhost:3016) in your browser.
 
-## Validate
-
+### Quality & Contract Verification
 ```sh
+# Verify TypeScript strict typecheck (0 errors)
 npm run check
-node scripts/validate-atlas.mjs
-node scripts/validate-interactions.mjs
+
+# Verify spatial packing, non-overlapping layouts, search, and gestures
+npx jiti scripts/validate-interactions.mjs
+
+# Build production bundle
 npm run build
 ```
 
-Validation covers mesh buffers, names and concept membership, nonoverlapping exploded layouts at desktop and mobile aspect ratios, search and inspection contracts, and tap-versus-drag handling. Browser interaction checks have exercised selection, system controls, search, isolation, rotation, and 390×844, 320×568, and 844×390 layouts. Phone controls stay clear of the exploded inventory, and isolated structures fit the space above or beside the detail panel. Physical-device performance and real multitouch hardware have not been tested.
+---
 
-## Anatomy data
+## 🏗️ Model Generation Scripts
 
-The current viewer uses **BodyParts3D 4.0**, an adult male reference anatomy, licensed **CC BY 4.0**. It does not represent every human structure or variation. Individual source meshes are distinct from named concepts, which may group multiple meshes. Descriptions distinguish general system context from individual organ explanations.
+The repository includes parameterized Python builders that generate browser-ready binary geometry chunks (`.bin`) and metadata (`.json`):
 
-Geometry is simplified for browser performance while retaining every source mesh. The packaged model contains 2,288,268 triangles and downloads approximately 33 MB of compressed geometry. Full credits, source links, and adaptation details are in [ATTRIBUTION.md](public/ATTRIBUTION.md).
+```sh
+# Generate luxury mechanical chronograph
+python3 scripts/generate-chronograph.py
 
-This is an educational explorer, not a diagnostic or surgical tool.
+# Generate AirPods Pro deconstruction
+python3 scripts/generate-airpods-pro.py
+```
 
-## How it works
+---
 
-Geometry is merged into batches. Per-structure GPU textures control translation, visibility, and selection, while component geometry supports accurate picking. Exploded layouts pack only the visible pieces. Rendering updates when the scene changes; orbit controls remain responsive without thousands of separate draw calls.
+## 📄 License
 
-The optional WebMCP tools expose anatomy search and inspection in compatible browsers. The visible interface works without them.
-
-## Rebuilding geometry
-
-The repository includes browser-ready geometry. Rebuilding it is optional: obtain the official BodyParts3D OBJ archive and English metadata tables, prepare the joined concepts and display-system mappings, run `scripts/convert-anatomy.py`, then `node scripts/optimize-anatomy.mjs` and `node scripts/compress-models.mjs`. Simplification uses a 0.2% relative error limit per structure.
-
-## Deploy
-
-Import this repository into Vercel as a Vite project. The included `vercel.json` configures `npm ci`, `npm run build`, and the `dist` output directory. It can also be served by a static host.
-
-## License
-
-Original application code is released under the [MIT License](LICENSE). **The anatomy data has its own CC BY 4.0 license**; preserve the attribution when redistributing it. Third-party dependencies retain their respective licenses.
-
-Issues and pull requests are welcome. Please include reproduction steps and browser/device details for interaction problems.
+Original application code and generative model scripts are released under the [MIT License](LICENSE).
+Attribution for third-party reference data is detailed in [ATTRIBUTION.md](public/ATTRIBUTION.md).

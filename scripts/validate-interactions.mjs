@@ -4,7 +4,7 @@ import {createExplosionLayout} from '../app/explosion-layout.ts';
 import {PointerTap} from '../app/pointer-tap.ts';
 import {atlasTools} from '../app/agent-tools.ts';
 
-for (const file of ['atlas.json']) {
+for (const file of ['earpods.json', 'atlas.json', 'chronograph.json']) {
   const atlas=JSON.parse(await readFile(new URL(`../public/models/${file}`,import.meta.url)));
   const groups=[atlas.parts,...[...new Set(atlas.parts.map(p=>p.system))].map(system=>atlas.parts.filter(p=>p.system===system))];
   for(const group of groups) for(const aspect of [.46,1,1.7]) {
@@ -22,7 +22,8 @@ for (const file of ['atlas.json']) {
   }
   let selected=null;
   const [find,inspect]=atlasTools(atlas,c=>{selected=c;});
-  const results=find.execute({query:'femur'});
+  const query = file === 'earpods.json' ? 'transducer' : file === 'chronograph.json' ? 'escapement' : 'femur';
+  const results=find.execute({query});
   assert.ok(results.length>0);
   inspect.execute({id:results[0].id});
   const previous=selected;
