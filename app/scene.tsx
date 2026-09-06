@@ -6,6 +6,7 @@ import {mergeGeometries} from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 import {createExplosionLayout} from './explosion-layout';
 import {decodeModelResponse} from './model-download';
 import {PointerTap} from './pointer-tap';
+import {resolveAssetUrl} from './asset-url';
 import {SYSTEMS,type Atlas,type SceneState} from './anatomy';
 interface Props {atlas:Atlas;state:SceneState;onSelect:(id:string)=>void;onProgress:(n:number)=>void;onError:(s:string)=>void}
 export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:Props){
@@ -91,7 +92,8 @@ partSelected = texture2D(selectionState, vec2((partIndex + 0.5) / stateWidth, 0.
   let loaded=0;
   const loadChunk=async(ci:number)=>{
    const chunk=atlas.chunks[ci],compressed=!!chunk.gzip&&typeof DecompressionStream!=='undefined';
-   const targetUrl=compressed?chunk.gzip!:chunk.url;
+   const rawChunkUrl=compressed?chunk.gzip!:chunk.url;
+   const targetUrl=resolveAssetUrl(rawChunkUrl);
    const url=targetUrl.includes('?')?targetUrl:`${targetUrl}?v=${Date.now()}`;
    const response=await fetch(url,{signal:abort.signal});const buffer=await decodeModelResponse(response,chunk.bytes,compressed);if(disposed)return;
    const groups=new Map<string,T.BufferGeometry[]>();

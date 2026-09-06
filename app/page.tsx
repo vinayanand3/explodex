@@ -10,6 +10,7 @@ import {Switch} from '@/components/ui/switch';
 import {Sheet,SheetContent,SheetTitle,SheetDescription} from '@/components/ui/sheet';
 import {Combobox,ComboboxInput,ComboboxContent,ComboboxList,ComboboxItem,ComboboxEmpty} from '@/components/ui/combobox';
 import AnatomyScene from './scene';
+import {resolveAssetUrl} from './asset-url';
 import {DEFAULT_VISIBLE,SYSTEMS,EXPLANATIONS,explanation,type Atlas,type Concept,type SceneState,type SystemId,type View} from './anatomy';
 
 const initial:SceneState={explode:0,visible:DEFAULT_VISIBLE,selected:[],isolate:false,view:'three-quarter',rotate:false,reset:0,sound:false};
@@ -24,7 +25,8 @@ export default function Home(){
  useEffect(()=>{
   const abort=new AbortController();
   setProgress(0);setError('');setAtlas(null);setChosen(null);setDetails(false);
-  const baseDataUrl=currentGadget.dataUrl??(modelId==='earpods'?'/models/earpods.json':modelId==='chronograph'?'/models/chronograph.json':'/models/atlas.json');
+  const rawUrl=currentGadget.dataUrl??(modelId==='earpods'?'/models/earpods.json':modelId==='chronograph'?'/models/chronograph.json':'/models/atlas.json');
+  const baseDataUrl=resolveAssetUrl(rawUrl);
   const targetUrl=baseDataUrl.includes('?')?baseDataUrl:`${baseDataUrl}?v=${Date.now()}`;
   fetch(targetUrl,{signal:abort.signal})
    .then(r=>{if(!r.ok)throw new Error('The 3D model catalogue could not be loaded.');return r.json();})
